@@ -10,7 +10,11 @@
   },
   "scripts": {
     "start": "node index.js",
-    "watch": "nodemon index.js"
+    "watch": "nodemon index.js",
+    "build:ui": "rm -rf build && cd ~/github.com/biehlerj/fullstackopen/part2/examples && yarn build --prod && cp -r build ~/github.com/biehlerj/notes-backend",
+    "deploy": "git push heroku master",
+    "deploy:full": "yarn build:ui && git add . && git commit -m uibuild && yarn deploy",
+    "logs:prod": "heroku logs --tail"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
