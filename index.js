@@ -8,6 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(morgan('tiny'));
 app.use(cors());
+app.use(express.static('build'));
 
 const requestLogger = (request, response, next) => {
   console.log('Method:', request.method);
@@ -89,7 +90,7 @@ app.post('/notes', (request, response) => {
 });
 
 const unknownEndpoint = (request, response) => {
-  response.status(404).send({ error: 'unknown endpoint' });
+  response.status(404).send({error: 'unknown endpoint'});
 };
 
 app.use(unknownEndpoint);
