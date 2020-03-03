@@ -19,18 +19,18 @@ const noteSchema = new mongoose.Schema({
 
 const Note = mongoose.model('Note', noteSchema);
 
-// const note = new Note({
-//   content: 'HTML is easy',
-//   date: new Date(),
-//   important: true,
-// });
+const note = new Note({
+  content: 'Browser can execute only Javascript',
+  date: new Date(),
+  important: true,
+});
 
-// note.save().then(response => {
-//   console.log('note saved!');
-//   mongoose.connection.close();
-// });
-
-Note.find({}).then(result => {
-  result.forEach(note => console.log(note));
+note.save().then(response => {
+  console.log('note saved!');
   mongoose.connection.close();
 });
+
+// Note.find({}).then(result => {
+//   result.forEach(note => console.log(note));
+//   mongoose.connection.close();
+// });
