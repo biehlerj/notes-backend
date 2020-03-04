@@ -1,0 +1,7 @@
+http://localhost:3001
+Content-Type: application/json
+POST /api/notes
+{
+    "content": "vim-rest-console is pretty good",
+    "important": true
+}

@@ -55,10 +55,8 @@
     "computed-property-spacing": "error",
     "consistent-return": "off",
     "consistent-this": "error",
-    "curly": "error",
     "default-case": "error",
     "default-param-last": "error",
-    "dot-location": "error",
     "dot-notation": [
       "error",
       {
@@ -116,7 +114,6 @@
     "max-lines": "error",
     "max-lines-per-function": "error",
     "max-nested-callbacks": "error",
-    "max-params": "error",
     "max-statements": "error",
     "max-statements-per-line": "error",
     "new-cap": "error",
@@ -200,8 +197,8 @@
     "no-ternary": "off",
     "no-throw-literal": "error",
     "no-trailing-spaces": "error",
+    "no-undef": "off",
     "no-undef-init": "error",
-    "no-undefined": "error",
     "no-unmodified-loop-condition": "error",
     "no-unneeded-ternary": "error",
     "no-unused-expressions": "error",
@@ -216,7 +213,10 @@
     "no-var": "error",
     "no-void": "error",
     "no-whitespace-before-property": "error",
-    "nonblock-statement-body-position": "error",
+    "nonblock-statement-body-position": [
+      "warn",
+      "any"
+    ],
     "object-curly-newline": "error",
     "object-curly-spacing": [
       "error",
